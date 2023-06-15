@@ -88,12 +88,8 @@ const logActivePersons = () => {
 const sortPersonBy = (property) => {
     const sortedPersons = [...persons]; // Clone to avoid source array changes
     sortedPersons.sort((a, b) => {
-        if (a[property] < b[property]) {
-            return -1;
-        }
-        if (a[property] > b[property]) {
-            return 1;
-        }
+        if (a[property] < b[property]) return -1;
+        if (a[property] > b[property]) return 1;
         return 0;
     });
     return sortedPersons;
